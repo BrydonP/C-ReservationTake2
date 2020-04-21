@@ -1,0 +1,68 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    
+</div>
+
+
+    <table border="1">
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Address
+            </th>
+            <th>
+                City
+            </th>
+            <th>
+                Province
+            </th>
+            <th>
+                PostalCode
+            </th>
+            <th>
+                FoodType
+            </th>
+            <th>
+                Action
+            </th>
+        </tr>
+        @foreach (var item in ViewBag.Restaurants)
+        {
+            <tr>
+                <td>
+                    @item.Id
+                </td>
+                <td>
+                    @item.Name
+                </td>
+                <td>
+                    @item.Address
+                </td>
+                <td>
+                    @item.City
+                </td>
+                <td>
+                    @item.Province
+                </td>
+                <td>
+                    @item.PostalCode
+                </td>
+                <td>
+                    @item.FoodTypeId
+                </td>
+                <td>
+                    <a asp-action="Reserve" asp-route-id="@item.Id">Reserve</a>
+                </td>
+            </tr>
+        }
+    </table>
+

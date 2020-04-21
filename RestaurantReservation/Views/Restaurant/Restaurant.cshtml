@@ -1,0 +1,13 @@
+﻿@model RestaurantReservation.Models.Restaurant
+@{
+    ViewData["Title"] = "Restaurant";
+
+    var restaurant = ViewData.Model;
+
+}
+
+<h1>@restaurant.Name</h1>
+<hr>
+<p>@restaurant.Address  @restaurant.City @restaurant.Province @restaurant.PostalCode</p>
+
+<a>Reserve</a>

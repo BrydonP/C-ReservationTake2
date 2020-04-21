@@ -1,0 +1,20 @@
+﻿@model RestaurantReservation.Models.User
+@{
+    ViewBag.Title = "Login";
+}
+
+    <form method="POST" asp-action="Login">
+        <p>
+            <label>Username</label>
+            <input type="text" asp-for="username" />
+        </p>
+
+        <p>
+            <label>Password</label>
+            <input type="password" asp-for="password" />
+        </p>
+        <p>
+            Dont have an Account? <a asp-action="Register">Register</a>
+        </p>
+        <button type="submit">Login</button>
+    </form>
